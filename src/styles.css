@@ -1,0 +1,172 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 20px;
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.header__search {
+  width: 50%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.header__icons {
+  display: flex;
+  gap: 15px;
+}
+
+.icon {
+  font-size: 24px;
+  cursor: pointer;
+  color: #ba1d1d;
+}
+
+.homepage {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.homepage__content {
+  display: flex;
+  flex: 1;
+  padding: 20px;
+  gap: 20px;
+}
+
+.homepage__feed {
+  flex: 3;
+}
+
+.homepage__sidebar {
+  flex: 1;
+}
+
+/* src/pages/styles.css */
+.post {
+  border: 1px solid #ddd;
+  margin-bottom: 20px;
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+}
+
+.post__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post__image {
+  width: 100%;
+  height: auto;
+}
+
+.post__footer {
+  padding: 10px;
+}
+
+
+
+
+
+
+.post__username {
+  font-weight: bold;
+}
+
+
+
+.post__details {
+  padding: 0 10px;
+}
+
+.post__actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 5px;
+}
+
+.icon--like, .icon--comment {
+  font-size: 20px;
+}
+
+.post__likes {
+  font-weight: bold;
+}
+
+.post__caption {
+  font-size: 14px;
+}
+
+
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .header__search {
+    width: 70%;
+  }
+
+  .homepage__content {
+    flex-direction: column;
+  }
+
+  .homepage__feed {
+    order: 2;
+  }
+
+  .homepage__sidebar {
+    order: 1;
+    margin-top: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .header__search {
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .header__icons {
+    margin-top: 10px;
+  }
+
+  .post__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .post__username {
+    margin-top: 5px;
+  }
+
+  .post__image {
+    height: 200px;
+    object-fit: cover;
+  }
+}

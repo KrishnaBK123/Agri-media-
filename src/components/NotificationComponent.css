@@ -1,0 +1,68 @@
+/* src/components/NotificationPage.css */
+.notification-page {
+  gap: 1.2rem;
+  max-width: 100%;
+  padding: 1rem;
+  margin-top: 70px;
+  background-color: #fff;
+   display: flex;
+  flex-direction: column;
+  background: #fff;
+  height: 100vh; /* Full viewport height */
+  max-height: auto; /* Ensure no content exceeds viewport */
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.notification-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  justify-content: center;
+}
+
+.notification-header h2 {
+  font-size: 18px;
+  margin: 0;
+}
+
+.notification-list {
+  padding: 10px;
+}
+
+.notification-item {
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.notification-profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.notification-info {
+  flex-grow: 1;
+}
+
+.notification-info p {
+  margin: 0;
+  font-size: 16px;
+}
+
+.notification-info .username {
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.notification-time {
+  font-size: 14px;
+  color: #777;
+}

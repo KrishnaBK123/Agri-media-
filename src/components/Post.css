@@ -1,0 +1,143 @@
+/* src/components/Post.css */
+
+.post {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ensures the post stays within the screen width */
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
+
+.post__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.post__header h3 {
+  font-size: 16px;
+  margin: 0;
+}
+
+.post__actions {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.post__actions .icon {
+  margin-right: 15px;
+  cursor: pointer;
+  font-size: 20px; /* Adjust size as needed */
+}
+
+.post__saved {
+  color: green;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.post__comment {
+  margin-bottom: 5px;
+}
+
+.post__comments {
+  margin-top: 10px;
+}
+
+.post__comments form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.post__comments input {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.post__comments button {
+  margin-left: 5px;
+  padding: 5px 10px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.post__footer {
+  margin-top: 10px;
+}
+
+.post__footer p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.post__footer p:first-of-type {
+  font-weight: bold;
+}
+
+/* Responsive Styles */
+
+/* Mobile screens (up to 768px) */
+@media (max-width: 768px) {
+  .post__header h3 {
+    font-size: 14px;
+  }
+
+  .post__footer p {
+    font-size: 12px;
+  }
+
+  .post {
+    padding: 8px; /* Adjust padding for smaller screens */
+  }
+}
+
+/* Very small mobile screens (up to 480px) */
+@media (max-width: 480px) {
+  .post__avatar {
+    width: 30px;
+    height: 30px;
+  }
+
+  .post__header h3 {
+    font-size: 12px;
+  }
+
+  .post__footer p {
+    font-size: 10px;
+  }
+
+  .post {
+    padding: 5px; /* Further reduce padding for small devices */
+  }
+}
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Ensures no horizontal scroll on any device */
+}
+
+.container {
+  max-width: 100%; /* Prevents components from overflowing the screen width */
+  padding: 0 15px; /* Adds space on the left and right for comfort */
+  box-sizing: border-box;
+}

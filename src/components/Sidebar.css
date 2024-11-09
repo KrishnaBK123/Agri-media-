@@ -1,0 +1,116 @@
+
+/* Sidebar Container */
+.sidebar {
+  background: #bcb6b6;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 500px; /* Ensures the post stays within the screen width */
+  overflow-x: hidden; /* Prevents horizontal overflow */}
+
+  
+.sidebar__section {
+  margin-bottom: 20px;
+  max-width: 350px;
+  width: 100%;
+
+}
+
+/* Weather Section */
+.sidebar__weather {
+  margin-bottom: 20px;
+ 
+}
+
+.sidebar__weather h2 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.sidebar__weather-list {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar__weather-item {
+  font-size: 16px;
+  margin-bottom: 8px;
+  color: #555;
+}
+
+.sidebar__avatar, .sidebar__post-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.sidebar__info {
+  flex: 1;
+}
+
+.sidebar__post-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar__post {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+
+.sidebar__post-image {
+  width: 100%;
+  height: auto;
+}
+
+.sidebar__post-content {
+  padding: 10px;
+}
+
+.sidebar__post-username {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.sidebar__post-caption {
+  font-size: 14px;
+  color: #555;
+}
+
+/* Responsive Adjustments */
+
+/* Medium to Small Devices (Tablets, small desktops) */
+@media (max-width: 768px) {
+  .sidebar, .sidebar__post {
+   max-width: 350px; /* Ensures both the sidebar and post components occupy the same width */
+    margin-bottom: 20px; /* Adds space between sidebar and other components */
+    padding: 15px;
+    margin-top: 55px;
+  }
+}
+
+/* Small Devices (Mobile phones) */
+@media (max-width: 480px) {
+  .sidebar, .sidebar__post {
+    max-width:350px; /* Ensure both sidebar and post components take full screen width */
+    padding: 10px;
+    margin-bottom: 15px;
+    margin-top: 120px;
+  }
+}
+
+/* Prevent Horizontal Scrolling */
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden; /* Prevents any horizontal scroll */
+}

@@ -1,0 +1,77 @@
+/* src/components/VideoBlog.css */
+
+.video-blog {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  max-width: 100%; /* Ensures the post stays within the screen width */
+  overflow-x: hidden; /* Prevents horizontal overflow */ 
+}
+
+.video-blog__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.video-blog__user-avatar {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+}
+
+.video-blog__user-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.video-blog__username {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+}
+
+.video-blog__video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.video-blog__title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.video-blog__description {
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .video-blog__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .video-blog__user-avatar {
+    height: 35px;
+    width: 35px;
+    margin-bottom: 10px;
+  }
+
+  .video-blog__username {
+    font-size: 16px;
+  }
+
+  .video-blog__title {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,113 @@
+.message-component {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  max-height: auto;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  margin-top: 70px;
+  margin-bottom: 20px;
+  padding: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.message-header {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.message-header__avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-header__username {
+  font-weight: bold;
+  flex-grow: 1;
+}
+
+.message-header__video-call-icon {
+  font-size: 20px;
+  cursor: pointer;
+  color: #4CAF50;
+  margin-left: 10px;
+}
+
+.message-header-line {
+  height: 1px;
+  background-color: #ddd;
+  margin-top: 10px;
+}
+
+.message-content {
+  padding: 10px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+.message-input {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+.message-input__file-label {
+  cursor: pointer;
+}
+
+.message-input__file {
+  display: none;
+}
+
+.message-input__text {
+  flex-grow: 1;
+  padding: 8px;
+  margin: 0 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.message-input__record, .message-input__send {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.message-content__message {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.message-content__message-avatar {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.message-content__message-bubble {
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 60%;
+}
+
+.message-content__message-text {
+  margin: 0;
+}
+
+.message-content__message-media {
+  width: 100%;
+  height: auto;
+}
+
+.message-content__message-error {
+  color: red;
+  font-size: 12px;
+}

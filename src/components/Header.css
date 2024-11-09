@@ -1,0 +1,118 @@
+.header {
+  display: flex;
+  width: calc(100% - 50px); /* Subtract the margin-right from 100% */
+  height: 60px;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  padding: 10px 20px;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  margin-right: 50px; /* Added margin-right */
+  z-index: 1000; /* Keeps header on top */
+}
+
+.header__logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.header__logo-image {
+  height: 40px;
+  width: auto;
+  cursor: pointer;
+  max-height: 30px;
+}
+
+.header__search {
+  max-width: 400px;
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.header__icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.header__icon {
+  font-size: 18px;
+  color: #333;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+.header__icon:hover {
+  color: #007bff;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .header {
+    padding: 10px;
+    width: calc(100% - 50px); /* Maintain margin-right on smaller screens */
+  }
+
+  .header__search {
+    max-width: 250px;
+  }
+
+  .header__icons {
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    flex-direction: row; /* Keep header in a row layout */
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    padding: 15px;
+    width: calc(100% - 50px); /* Apply margin-right */
+  }
+
+  .header__logo, .header__search {
+    flex: 1; /* Keep logo and search side by side */
+  }
+
+  .header__search {
+    max-width: 60%; /* Reduce width for smaller screens */
+    margin: 0;
+  }
+
+  .header__icons {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header {
+    flex-direction: row; /* Keep row layout even on small screens */
+  }
+
+  .header__logo, .header__search {
+    flex: 1;
+  }
+
+  .header__search {
+    max-width: 70%; /* Adjust the width on very small screens */
+    margin: 0;
+  }
+
+  .header__icons {
+    justify-content: flex-end;
+    margin-top: 5px;
+  }
+}
