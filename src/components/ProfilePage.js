@@ -1,5 +1,5 @@
 // src/components/ProfilePage.js
-import React from 'react';
+import React, { useState } from 'react';
 import './ProfilePage.css'; // Import CSS for styling
 
 // Import local images for posts and profile picture
@@ -13,13 +13,13 @@ const ProfilePage = ({ user }) => {
   const defaultUser = {
     profilePic: profile, // Default profile picture
     username: 'Ravi', // Default username
-    bio: ' Passionate about farming and nature.', // Default bio
+    bio: 'Passionate about farming and nature.', // Default bio
     location: 'Earth', // Default location
     website: 'https://www.farming.com', // Default website (you can modify as needed)
     posts: 3, // Sample number of posts
     followers: 100, // Sample number of followers
     following: 50, // Sample number of following
-    postsData: [      // Sample post data with local image imports
+    postsData: [ // Sample post data with local image imports
       {
         id: 1,
         image: sunriseImage,
@@ -39,6 +39,19 @@ const ProfilePage = ({ user }) => {
   };
 
   const currentUser = user || defaultUser; // Use defaultUser if user is undefined
+
+  // State for handling modal visibility
+  const [selectedPost, setSelectedPost] = useState(null);
+
+  // Function to handle post click
+  const handlePostClick = (post) => {
+    setSelectedPost(post);
+  };
+
+  // Function to close modal
+  const closeModal = () => {
+    setSelectedPost(null);
+  };
 
   return (
     <div className="profile-page">
@@ -70,7 +83,11 @@ const ProfilePage = ({ user }) => {
             <p>No posts available</p>
           ) : (
             currentUser.postsData.map((post) => (
-              <div key={post.id} className="post-card">
+              <div
+                key={post.id}
+                className="post-card"
+                onClick={() => handlePostClick(post)}
+              >
                 <img src={post.image} alt="Post" className="post-image" />
                 <p className="post-caption">{post.caption}</p>
               </div>
@@ -78,6 +95,19 @@ const ProfilePage = ({ user }) => {
           )}
         </div>
       </div>
+
+      {/* Modal for displaying selected post */}
+      {selectedPost && (
+        <div className="modal-overlay" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <span className="close-button" onClick={closeModal}>
+              &times;
+            </span>
+            <img src={selectedPost.image} alt="Selected Post" className="modal-image" />
+            <p className="modal-caption">{selectedPost.caption}</p>
+          </div>
+        </div>
+      )}
     </div>
   );
 };

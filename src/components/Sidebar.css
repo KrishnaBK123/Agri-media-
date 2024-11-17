@@ -1,4 +1,3 @@
-
 /* Sidebar Container */
 .sidebar {
   background: #bcb6b6;
@@ -9,20 +8,18 @@
   padding: 10px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 500px; /* Ensures the post stays within the screen width */
-  overflow-x: hidden; /* Prevents horizontal overflow */}
+  overflow-x: hidden; /* Prevents horizontal overflow */
+}
 
-  
 .sidebar__section {
   margin-bottom: 20px;
   max-width: 350px;
   width: 100%;
-
 }
 
 /* Weather Section */
 .sidebar__weather {
   margin-bottom: 20px;
- 
 }
 
 .sidebar__weather h2 {
@@ -40,6 +37,31 @@
   font-size: 16px;
   margin-bottom: 8px;
   color: #555;
+}
+
+/* Toggle button */
+.sidebar__toggle-button {
+  display: inline-block;
+  margin-bottom: 15px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.sidebar__toggle-button:hover {
+  background-color: #0056b3;
+}
+
+/* Hidden by default on smaller screens */
+.sidebar__trending-posts.hidden {
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 .sidebar__avatar, .sidebar__post-avatar {
@@ -90,21 +112,32 @@
 
 /* Medium to Small Devices (Tablets, small desktops) */
 @media (max-width: 768px) {
-  .sidebar, .sidebar__post {
-   max-width: 350px; /* Ensures both the sidebar and post components occupy the same width */
-    margin-bottom: 20px; /* Adds space between sidebar and other components */
+  .sidebar {
+    max-width: 350px; /* Ensures both the sidebar and post components occupy the same width */
     padding: 15px;
-    margin-top: 55px;
+  }
+
+  /* Add top margin to sections like weather or trending posts */
+  .sidebar__weather {
+    margin-top: 15px; /* Ensure weather section has space above it */
   }
 }
 
 /* Small Devices (Mobile phones) */
 @media (max-width: 480px) {
-  .sidebar, .sidebar__post {
-    max-width:350px; /* Ensure both sidebar and post components take full screen width */
+  .sidebar {
+    max-width: 350px; /* Ensure both sidebar and post components take full screen width */
     padding: 10px;
     margin-bottom: 15px;
-    margin-top: 120px;
+  }
+
+  /* Add top margin to sections like weather or trending posts */
+  .sidebar__weather {
+    margin-top: 15px; /* Adjust margin for small devices */
+  }
+
+  .sidebar__section {
+    margin-top: 50px; /* Avoid gap between weather and trending posts */
   }
 }
 
