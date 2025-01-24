@@ -1,6 +1,7 @@
+/* Base header styling (unchanged) */
 .header {
   display: flex;
-  width: calc(100% - 50px); /* Subtract the margin-right from 100% */
+  width: calc(100% - 50px);
   height: 60px;
   justify-content: space-between;
   align-items: center;
@@ -9,8 +10,8 @@
   padding: 10px 20px;
   background-color: #fff;
   border-bottom: 1px solid #ddd;
-  margin-right: 50px; /* Added margin-right */
-  z-index: 1000; /* Keeps header on top */
+  margin-right: 50px;
+  z-index: 1000;
 }
 
 .header__logo {
@@ -59,7 +60,7 @@
 @media (max-width: 1024px) {
   .header {
     padding: 10px;
-    width: calc(100% - 50px); /* Maintain margin-right on smaller screens */
+    width: calc(100% - 50px);
   }
 
   .header__search {
@@ -67,52 +68,55 @@
   }
 
   .header__icons {
-    justify-content: space-between;
+    justify-content: flex-end;
   }
 }
 
 @media (max-width: 768px) {
   .header {
-    flex-direction: row; /* Keep header in a row layout */
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
     height: auto;
     padding: 15px;
-    width: calc(100% - 50px); /* Apply margin-right */
+    width: calc(100% - 50px);
   }
 
-  .header__logo, .header__search {
-    flex: 1; /* Keep logo and search side by side */
+  .header__logo {
+    margin-bottom: 10px;
   }
 
   .header__search {
-    max-width: 60%; /* Reduce width for smaller screens */
-    margin: 0;
+    max-width: 80%; /* Center and increase max-width for visibility */
+    margin: 8px;
+    flex: 0;
+    text-align: center;
   }
 
   .header__icons {
     width: 100%;
-    justify-content: flex-end;
+    justify-content: center; /* Center icons on smaller screens */
     margin-top: 10px;
   }
 }
 
 @media (max-width: 480px) {
   .header {
-    flex-direction: row; /* Keep row layout even on small screens */
+    flex-direction: column;
   }
 
-  .header__logo, .header__search {
-    flex: 1;
+  .header__logo {
+    margin-bottom: 10px;
   }
 
   .header__search {
-    max-width: 70%; /* Adjust the width on very small screens */
-    margin: 0;
+    max-width: 100%; /* Adjust max-width for smaller screens */
+    margin: 10px auto;
+    text-align: center;
   }
 
   .header__icons {
-    justify-content: flex-end;
+    justify-content: space-around; /* Center icons on very small screens */
     margin-top: 5px;
   }
 }

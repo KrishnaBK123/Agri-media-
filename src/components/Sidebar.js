@@ -33,6 +33,7 @@ const Sidebar = () => {
   });
 
   const [trendingPosts] = useState(trendingPostsData);
+  const [showTrendingPosts, setShowTrendingPosts] = useState(true); // Toggle state for trending posts
 
   const API_KEY = '9d30b68ced6c11846e34469db629ca6a'; // Replace with your actual API key
   const CITY_NAME = 'Bengaluru'; // Replace with your city or pass dynamically
@@ -80,8 +81,16 @@ const Sidebar = () => {
         </ul>
       </div>
 
+      {/* Toggle Button for Trending Posts on smaller screens */}
+      <button
+        className="sidebar__toggle-button"
+        onClick={() => setShowTrendingPosts(!showTrendingPosts)}
+      >
+        {showTrendingPosts ? 'Hide Trending Posts' : 'Show Trending Posts'}
+      </button>
+
       {/* Trending Posts Section */}
-      <div className="sidebar__section sidebar__trending-posts">
+      <div className={`sidebar__section sidebar__trending-posts ${!showTrendingPosts ? 'hidden' : ''}`}>
         <h2>Trending Posts</h2>
         <div className="sidebar__post-container">
           {trendingPosts.map((post, index) => (
